@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Instalar o Mãe Presente</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#F2785C">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-64.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="fontes/inter.css">
+<style>
+:root{--c:#F2785C;--cd:#D9573A;--p:#FFF4EF;--p2:#FFE4D9;--v:#3A1930;--ink:#171311;--mut:#766b66;--sl:#E1EEE3;--sd:#3F6B4F}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--p);color:#3d3836;line-height:1.5;-webkit-font-smoothing:antialiased}
+.w{max-width:480px;margin:0 auto;padding:calc(22px + env(safe-area-inset-top)) 18px 40px;display:flex;flex-direction:column;gap:16px}
+.hd{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+.hd img{width:92px;height:92px;border-radius:22px;box-shadow:0 8px 22px rgba(217,87,58,.3)}
+h1{font-size:26px;line-height:1.2;color:var(--ink);font-weight:800;letter-spacing:-.02em}
+.sub{color:var(--mut);font-size:16px}
+.seg{display:flex;background:#fff;border-radius:14px;padding:4px;gap:4px}
+.seg button{flex:1;border:0;background:none;font:inherit;font-weight:700;font-size:15px;color:var(--mut);padding:11px 6px;border-radius:11px;cursor:pointer}
+.seg button.on{background:var(--c);color:#fff}
+.box{background:#fff;border-radius:20px;padding:18px 16px;display:flex;flex-direction:column;gap:14px}
+.alerta{background:#FBF1DD;color:#6b4a0c;border-radius:16px;padding:14px;font-size:15px}.alerta b{color:#6b4a0c;display:block;font-size:16px}
+.st{display:flex;gap:12px;align-items:flex-start}
+.st>span{width:34px;height:34px;border-radius:50%;background:var(--c);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.st div{flex:1;font-size:16px;padding-top:4px}.st b{color:var(--ink)}
+.il{margin-top:8px;background:var(--p);border-radius:14px;padding:12px;display:flex;align-items:center;justify-content:center;gap:10px;font-weight:700;color:var(--ink);font-size:15px}
+.il svg{width:30px;height:30px;stroke:var(--cd);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.il img{width:44px;height:44px;border-radius:11px}
+.barra{background:#F1F1F3;border-radius:12px;padding:9px 12px;display:flex;align-items:center;gap:10px;width:100%}
+.barra i{flex:1;height:26px;background:#fff;border-radius:8px;font-style:normal;font-size:12px;color:#888;display:flex;align-items:center;justify-content:center;font-weight:500}
+.barra svg{width:24px;height:24px}.barra .alvo{outline:3px solid var(--c);outline-offset:3px;border-radius:6px;animation:pisca 1.3s infinite}
+@keyframes pisca{50%{outline-color:transparent}}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:16px;border-radius:14px;border:0;font:inherit;font-weight:700;font-size:17px;cursor:pointer;text-decoration:none;text-align:center}
+.pri{background:var(--cd);color:#fff;box-shadow:0 3px 0 #A9402A}.sec{background:#fff;color:var(--cd)}.gh{background:none;color:var(--mut);font-size:15px;font-weight:600;text-decoration:underline}
+.ok{background:var(--sl);color:var(--sd);border-radius:16px;padding:16px;text-align:center;font-weight:600}.ok b{display:block;font-size:19px;color:#234a31}
+.foto{border-radius:20px;overflow:hidden;aspect-ratio:16/9}.foto img{width:100%;height:100%;object-fit:cover;display:block}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="w">
+  <div class="hd"><img src="icons/icon-192.png" alt=""><h1>Coloque o Mãe Presente<br>na tela do seu celular</h1><p class="sub">Leva 1 minuto. Depois é só tocar na casinha laranja, igual a qualquer aplicativo. Não precisa de loja nem de senha.</p></div>
+
+  <div class="ok" id="ja" hidden><b>Já está instalado! 🎉</b>Você abriu pelo aplicativo. É só usar.</div>
+
+  <div class="alerta" id="inapp" hidden><b>Antes de tudo: abra no navegador</b><span id="inapp-t"></span></div>
+
+  <div class="seg" id="seg"><button data-s="ios">iPhone</button><button data-s="and">Android</button><button data-s="pc">Computador</button></div>
+
+  <div class="box" id="ios" hidden>
+    <div class="st"><span>1</span><div>Abra este link no <b>Safari</b> (o navegador da bússola azul).
+      <div class="il"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.500 8.500-2 5-5 2 2-5z"/></svg>Safari</div></div></div>
+    <div class="st"><span>2</span><div>Toque no botão <b>Compartilhar</b>: o quadradinho com a seta pra cima, na barra de baixo.
+      <div class="il"><div class="barra"><svg viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></svg><i>seu-link.com.br</i><svg class="alvo" viewBox="0 0 24 24"><path d="M12 15V3m0 0L8 7m4-4 4 4"/><path d="M6 11H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-1"/></svg></div></div></div></div>
+    <div class="st"><span>3</span><div>Role a lista pra baixo e toque em <b>“Adicionar à Tela de Início”</b>.
+      <div class="il"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg>Adicionar à Tela de Início</div></div></div>
+    <div class="st"><span>4</span><div>Toque em <b>Adicionar</b>, lá em cima. Pronto: a casinha laranja aparece na sua tela.
+      <div class="il"><img src="icons/icon-192.png" alt="">Mãe Presente</div></div></div>
+  </div>
+
+  <div class="box" id="and" hidden>
+    <button class="btn pri" id="inst" hidden>Instalar agora</button>
+    <p class="sub" id="inst-t" hidden>Tocou e apareceu uma janela? Toque em <b>Instalar</b>. Se o botão não funcionar, siga os passos abaixo.</p>
+    <div class="st"><span>1</span><div>Abra este link no <b>Chrome</b> (a bolinha colorida).
+      <div class="il"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.500"/></svg>Chrome</div></div></div>
+    <div class="st"><span>2</span><div>Toque nos <b>três pontinhos</b>, no canto de cima da tela.
+      <div class="il"><div class="barra"><i>seu-link.com.br</i><svg class="alvo" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.300" fill="#D9573A"/><circle cx="12" cy="12" r="1.300" fill="#D9573A"/><circle cx="12" cy="19" r="1.300" fill="#D9573A"/></svg></div></div></div></div>
+    <div class="st"><span>3</span><div>Toque em <b>“Adicionar à tela inicial”</b> ou <b>“Instalar aplicativo”</b>.
+      <div class="il"><svg viewBox="0 0 24 24"><rect x="6" y="2.500" width="12" height="19" rx="2.500"/><path d="M12 8v7m0 0-2.500-2.500M12 15l2.500-2.500"/></svg>Instalar aplicativo</div></div></div>
+    <div class="st"><span>4</span><div>Confirme em <b>Instalar</b>. A casinha laranja aparece na sua tela.
+      <div class="il"><img src="icons/icon-192.png" alt="">Mãe Presente</div></div></div>
+  </div>
+
+  <div class="box" id="pc" hidden>
+    <div class="st"><span>1</span><div>No computador, o aplicativo abre direto no navegador. É só guardar este link nos <b>favoritos</b> (aperte <b>Ctrl + D</b>).</div></div>
+    <div class="st"><span>2</span><div>No Chrome, você também pode clicar no ícone de <b>instalar</b>, no fim da barra de endereço.</div></div>
+    <div class="st"><span>3</span><div>Pra usar no celular, abra este mesmo link no celular e volte nesta página.</div></div>
+  </div>
+
+  <div class="foto"><img src="imagens/capa-3-mae-brincando.webp" alt=""></div>
+  <a class="btn sec" href="index.html">Abrir o aplicativo</a>
+  <a class="btn gh" href="index.html">Prefiro usar pelo navegador, sem instalar</a>
+  <p class="sub" style="text-align:center;font-size:14px">O que você marca fica guardado só neste aparelho. Use sempre o mesmo celular e o mesmo navegador.</p>
+</div>
+<script>
+(function(){
+  var ua=navigator.userAgent||'',$=function(s){return document.querySelector(s)};
+  var ios=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1),and=/Android/i.test(ua);
+  var app=/Instagram/i.test(ua)?'Instagram':/FBAN|FBAV|FB_IAB/i.test(ua)?'Facebook':/WhatsApp/i.test(ua)?'WhatsApp':/TikTok|musical_ly/i.test(ua)?'TikTok':/GSA\//i.test(ua)?'Google':/Line\//i.test(ua)?'Line':'';
+  if(ios&&!app&&/CriOS|FxiOS|EdgiOS/i.test(ua))app='outro navegador';
+  var instalado=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone;
+  function sel(k){['ios','and','pc'].forEach(function(x){$('#'+x).hidden=x!==k;});[].forEach.call(document.querySelectorAll('#seg button'),function(b){b.className=b.dataset.s===k?'on':'';});}
+  $('#seg').addEventListener('click',function(e){var k=e.target.dataset.s;if(k)sel(k);});
+  sel(ios?'ios':and?'and':'pc');
+  if(instalado){$('#ja').hidden=false;}
+  if(app){
+    $('#inapp').hidden=false;
+    $('#inapp-t').textContent=app==='outro navegador'
+      ?'No iPhone, a instalação só funciona pelo Safari. Copie este link e abra no Safari (a bússola azul).'
+      :'Você abriu este link por dentro do '+app+'. Por ali não dá pra instalar. Toque nos três pontinhos (⋯) no canto da tela e escolha “Abrir no navegador” ou “Abrir no '+(ios?'Safari':'Chrome')+'”. Depois volte nesta página.';
+  }
+  var ev=null;
+  window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();ev=e;$('#inst').hidden=false;$('#inst-t').hidden=false;if(!ios)sel('and');});
+  $('#inst').addEventListener('click',function(){if(!ev)return;ev.prompt();ev.userChoice.then(function(){ev=null;$('#inst').hidden=true;});});
+  window.addEventListener('appinstalled',function(){$('#ja').hidden=false;$('#ja').innerHTML='<b>Instalado! 🎉</b>Procure a casinha laranja na tela do seu celular.';});
+  if('serviceWorker' in navigator&&location.protocol==='https:')navigator.serviceWorker.register('service-worker.js').catch(function(){});
+})();
+</script>
+</body>
+</html>
